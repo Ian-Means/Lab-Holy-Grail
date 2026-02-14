@@ -7,15 +7,35 @@
     <title>Holy Grail</title>
 </head>
 <body>
-    <header>The header has the default position of static, as the position propery has not been set. This means it remains in document flow.</header>
-    <nav>The navigation bar has fixed positioning, so it will remain on screen. It is offset from the top and left</nav>
+    <header>
+        The header has the default position of static, as the position propery has not been set. 
+        This means it remains in document flow, and there are no offsets to affect the positioning.
+    </header>
+    <nav>
+        The navigation bar has fixed positioning, so it will remain on screen. It is offset from 
+        the top and left of the main body.
+    </nav>
     <div>
         <div class="articles">
-            <article></article>
-            <article></article>
+            <article>
+                The articles are placed inside a div with relative positioning which remains in 
+                document flow, meaning will stack under the header with no offset.
+            </article>
+            <article>
+                The articles themselves also have relative positioning and will remain in document 
+                flow within the container div. Each is offset from its default position from the 
+                top by 15 pixels.
+            </article>
         </div>
-    <aside></aside>
+    <aside>
+        The aside has absolute positioning, taking it out of document flow. It is offset from the 
+        top by a fixed amount, while also offset from the left and right by an amount relative to 
+        the container width.
+    </aside>
     </div>
-    <footer></footer>
+    <footer>
+        Like the nav bar, the footer has fixed positioning and will always remain on screen. It is 
+        offset from the bottom of the main body by zero pixels.
+    </footer>
 </body>
 </html>
